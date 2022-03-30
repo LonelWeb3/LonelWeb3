@@ -26,7 +26,7 @@ contract Lottery {
     function random() public view returns(uint) {
         return uint(keccak256(abi.encodePacked(block.difficulty, block.timestamp, Players.length)));
     }
-    //this function made to generate randomness keen on being hacked, it is possible to find another secure way : use an Oracle;
+    //this function made to generate randomness keen on being hacked, it is possible to find another secure way : use an Oracle
 
   //This function is the core of the contract and allows to pick up the winner among the players' array. 
     /*function pickWinner() public view returns(address){
